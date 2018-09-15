@@ -14,35 +14,9 @@
                         We were not able to auto determine your location and your local currency.
                     </p>
                 @endif
-            </div>
-
-            <div class="col-sm-12 form-row">
-                <div class="col-sm-6">
-                    <label for="country">Country:</label>
-                    <select id="country" class="form-control">
-                        @foreach($allCountries as $index => $value)
-                            @if ($country == $value->country)
-                                <option value="" selected>{{ $value->country }}</option>
-                            @else
-                                <option value="" >{{ $value->country }}</option>
-                            @endif
-                        @endforeach
-                    </select>
+                <div id="app">
+                    <location-component></location-component>
                 </div>
-
-                <div class="col-sm-6">
-                    <label for="currency">Currency: </label>
-                    <select id="currency" class="form-control">
-                        @foreach($allCurrencies as $index => $value)
-                            @if ($currency == $value->currency)
-                                <option value="<?php echo $value->currency ?>" selected>{{ $value->currency }}</option>
-                            @else
-                                <option value="<?php echo $value->currency ?>">{{ $value->currency }}</option>
-                            @endif
-                        @endforeach
-                    </select>
-                </div>
-                
             </div>
         </div>
     </div>

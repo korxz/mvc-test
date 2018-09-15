@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('location-component', require('./components/LocationComponent.vue'))
 
 const app = new Vue({
     el: '#app'

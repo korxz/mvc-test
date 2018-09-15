@@ -15,3 +15,8 @@ Route::get('/{client_ip?}', [
     'as' => 'index',
     'uses' => 'IndexController@index'
 ]);
+
+Route::get('/api/locations', [
+    'as' => 'api-locations',
+    'uses' => 'Api\LocationController@index'
+]);
